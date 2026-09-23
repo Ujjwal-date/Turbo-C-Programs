@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    clrscr();
+    printf("My age is 18");
+    getch();
+}
