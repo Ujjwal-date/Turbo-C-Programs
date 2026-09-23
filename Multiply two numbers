@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a,b;
+    clrscr();
+
+    a=5;
+    b=4;
+
+    printf("Answer = %d",a*b);
+
+    getch();
+}
