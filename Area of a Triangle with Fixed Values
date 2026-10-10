@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int b=10,h=5;
+    clrscr();
+
+    printf("Area=%d",(b*h)/2);
+    getch();
+}
