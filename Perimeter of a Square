@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int side=5;
+    clrscr();
+
+    printf("Perimeter=%d",4*side);
+    getch();
+}
