@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+void main()
+{
+    int n=123;
+    clrscr();
+
+    printf("Last digit=%d",n%10);
+    getch();
+}
