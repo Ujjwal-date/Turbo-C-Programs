@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+void main()
+{
+    int hours=2;
+    clrscr();
+
+    printf("Minutes=%d",hours*60);
+    getch();
+}
