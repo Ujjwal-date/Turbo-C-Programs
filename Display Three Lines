@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    clrscr();
+
+    printf("I am learning C.\n");
+    printf("C is easy.\n");
+    printf("I will practice daily.");
+
+    getch();
+}
