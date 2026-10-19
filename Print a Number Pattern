@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    clrscr();
+
+    printf("1\n");
+    printf("12\n");
+    printf("123\n");
+    printf("1234\n");
+    printf("12345\n");
+
+    getch();
+}
