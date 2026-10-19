@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int i;
+    clrscr();
+
+    for(i=3;i<=30;i=i+3)
+        printf("%d\n",i);
+
+    getch();
+}
