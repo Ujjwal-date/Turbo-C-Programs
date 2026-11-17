@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,i,temp,d,sum;
+
+    printf("Armstrong numbers from 1 to 1000:\n");
+
+    for(i=1;i<=1000;i++)
+    {
+        n=i;
+        temp=n;
+        sum=0;
+
+        while(temp>0)
+        {
+            d=temp%10;
+            sum=sum+d*d*d;
+            temp=temp/10;
+        }
+
+        if(sum==n)
+            printf("%d ",n);
+    }
+
+    return 0;
+}
