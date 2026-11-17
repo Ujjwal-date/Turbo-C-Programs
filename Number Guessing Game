@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+    int n,guess=37;
+
+    printf("Guess a number between 1 and 100\n");
+
+    do
+    {
+        printf("Enter guess: ");
+        scanf("%d",&n);
+
+        if(n>guess)
+            printf("Too high!\n");
+        else if(n<guess)
+            printf("Too low!\n");
+        else
+            printf("Correct! You won!\n");
+
+    }while(n!=guess);
+
+    return 0;
+}
