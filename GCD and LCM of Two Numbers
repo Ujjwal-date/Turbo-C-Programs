@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+void main()
+{
+    int a,b,x,y,rem,gcd,lcm;
+
+    printf("Enter two numbers: ");
+    scanf("%d%d",&a,&b);
+
+    x=a;
+    y=b;
+
+    while(y!=0)
+    {
+        rem=x%y;
+        x=y;
+        y=rem;
+    }
+
+    gcd=x;
+
+    if(gcd!=0)
+        lcm=(a/gcd)*b;
+    else
+        lcm=0;
+
+    printf("GCD = %d\n",gcd);
+    printf("LCM = %d",lcm);
+}
