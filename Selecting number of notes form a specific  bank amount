@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    int a;
+    clrscr();
+    
+    printf("Enter any amount: ");
+    scanf("%d", &a);   // Takes whatever amount the user types
+    
+    printf("500:%d 200:%d 100:%d 50:%d 20:%d 10:%d 5:%d 2:%d 1:%d",
+           a/500, (a%=500)/200, (a%=200)/100, (a%=100)/50, (a%=50)/20, (a%=20)/10, (a%=10)/5, (a%=5)/2, a%=2);
+    
+    getch();
+}
