@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,square,sum=0,rem;
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    square=n*n;
+
+    while(square>0)
+    {
+        rem=square%10;
+        sum=sum+rem;
+        square=square/10;
+    }
+
+    if(sum==n)
+        printf("Neon Number");
+    else
+        printf("Not a Neon Number");
+}
