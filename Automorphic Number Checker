@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,square,temp,power=1;
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    square=n*n;
+    temp=n;
+
+    while(temp>0)
+    {
+        power=power*10;
+        temp=temp/10;
+    }
+
+    if(square%power==n)
+        printf("Automorphic Number");
+    else
+        printf("Not an Automorphic Number");
+}
