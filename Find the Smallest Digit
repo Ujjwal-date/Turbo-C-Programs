@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,rem,min=9;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    while(n>0)
+    {
+        rem=n%10;
+
+        if(rem<min)
+            min=rem;
+
+        n=n/10;
+    }
+
+    printf("Smallest digit = %d",min);
+}
