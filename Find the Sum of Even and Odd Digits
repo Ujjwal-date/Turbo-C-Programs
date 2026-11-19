@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,rem,even=0,odd=0;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    while(n>0)
+    {
+        rem=n%10;
+
+        if(rem%2==0)
+            even=even+rem;
+        else
+            odd=odd+rem;
+
+        n=n/10;
+    }
+
+    printf("Even digit sum = %d\n",even);
+    printf("Odd digit sum = %d",odd);
+}
