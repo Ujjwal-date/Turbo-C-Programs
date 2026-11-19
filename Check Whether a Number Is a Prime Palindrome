@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,i,rev=0,temp,flag=1;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    if(n<=1)
+        flag=0;
+
+    for(i=2;i*i<=n;i++)
+    {
+        if(n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+
+    temp=n;
+
+    while(temp>0)
+    {
+        rev=rev*10+temp%10;
+        temp=temp/10;
+    }
+
+    if(flag==1 && rev==n)
+        printf("Prime Palindrome");
+    else
+        printf("Not Prime Palindrome");
+}
