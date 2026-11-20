@@ -1,0 +1,25 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,rem,i,fact,sum=0;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    while(n>0)
+    {
+        rem=n%10;
+        fact=1;
+
+        for(i=1;i<=rem;i++)
+            fact=fact*i;
+
+        printf("%d! = %d\n",rem,fact);
+
+        sum=sum+fact;
+        n=n/10;
+    }
+
+    printf("Total factorial sum = %d",sum);
+}
