@@ -1,0 +1,37 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,temp,digits=0,div=1;
+    int first,second,sum;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    temp=n;
+
+    while(temp>0)
+    {
+        digits++;
+        temp=temp/10;
+    }
+
+    if(digits%2!=0)
+    {
+        printf("Not a Tech Number");
+        return;
+    }
+
+    for(temp=1;temp<=digits/2;temp++)
+        div=div*10;
+
+    first=n/div;
+    second=n%div;
+
+    sum=first+second;
+
+    if(sum*sum==n)
+        printf("Tech Number");
+    else
+        printf("Not a Tech Number");
+}
