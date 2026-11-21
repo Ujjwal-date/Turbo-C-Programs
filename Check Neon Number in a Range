@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,i,square,temp,sum,rem;
+
+    printf("Enter limit: ");
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++)
+    {
+        square=i*i;
+        temp=square;
+        sum=0;
+
+        while(temp>0)
+        {
+            rem=temp%10;
+            sum=sum+rem;
+            temp=temp/10;
+        }
+
+        if(sum==i)
+            printf("%d ",i);
+    }
+}
