@@ -1,0 +1,35 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,count=0,num=2,i,flag;
+
+    printf("Enter position of prime number: ");
+    scanf("%d",&n);
+
+    while(count<n)
+    {
+        flag=1;
+
+        for(i=2;i*i<=num;i++)
+        {
+            if(num%i==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+
+        if(flag==1)
+        {
+            count++;
+        }
+
+        if(count==n)
+            break;
+
+        num++;
+    }
+
+    printf("Prime number at position %d = %d",n,num);
+}
