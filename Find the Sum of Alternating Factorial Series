@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,i,j,fact;
+    long sum=0;
+
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
+
+    for(i=1;i<=n;i++)
+    {
+        fact=1;
+
+        for(j=1;j<=i;j++)
+        {
+            fact=fact*j;
+        }
+
+        if(i%2==0)
+            sum=sum-fact;
+        else
+            sum=sum+fact;
+    }
+
+    printf("Sum of series = %ld",sum);
+}
