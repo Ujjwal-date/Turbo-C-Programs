@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,temp,i,sum=0,factorSum=0,rem;
+
+    printf("Enter number: ");
+    scanf("%d",&n);
+
+    temp=n;
+
+    while(temp>0)
+    {
+        sum=sum+temp%10;
+        temp=temp/10;
+    }
+
+    temp=n;
+
+    for(i=2;i<=temp;i++)
+    {
+        while(temp%i==0)
+        {
+            int x=i;
+
+            while(x>0)
+            {
+                factorSum=factorSum+x%10;
+                x=x/10;
+            }
+
+            temp=temp/i;
+        }
+    }
+
+    if(sum==factorSum && n>1)
+        printf("Smith Number");
+    else
+        printf("Not a Smith Number");
+}
