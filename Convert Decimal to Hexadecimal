@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,rem,i=0,j;
+    char hex[20];
+
+    printf("Enter decimal number: ");
+    scanf("%d",&n);
+
+    if(n==0)
+    {
+        printf("Hexadecimal = 0");
+        return;
+    }
+
+    while(n>0)
+    {
+        rem=n%16;
+
+        if(rem<10)
+            hex[i]=rem+'0';
+        else
+            hex[i]=rem-10+'A';
+
+        i++;
+        n=n/16;
+    }
+
+    printf("Hexadecimal = ");
+
+    for(j=i-1;j>=0;j--)
+        printf("%c",hex[j]);
+}
