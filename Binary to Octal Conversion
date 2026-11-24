@@ -1,0 +1,50 @@
+#include<stdio.h>
+
+void main()
+{
+    long binary;
+    int decimal=0,base=1,rem;
+    int octal[20],i=0,j;
+
+    clrscr();
+
+    printf("Enter binary number: ");
+    scanf("%ld",&binary);
+
+    while(binary>0)
+    {
+        rem=binary%10;
+
+        if(rem>1)
+        {
+            printf("Invalid Binary Number");
+            getch();
+            return;
+        }
+
+        decimal=decimal+rem*base;
+        base=base*2;
+        binary=binary/10;
+    }
+
+    if(decimal==0)
+    {
+        printf("Octal = 0");
+        getch();
+        return;
+    }
+
+    while(decimal>0)
+    {
+        octal[i]=decimal%8;
+        decimal=decimal/8;
+        i++;
+    }
+
+    printf("Octal = ");
+
+    for(j=i-1;j>=0;j--)
+        printf("%d",octal[j]);
+
+    getch();
+}
