@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int n,i,j,space,coef;
+
+    clrscr();
+
+    printf("Enter number of rows: ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        for(space=1;space<=n-i;space++)
+            printf(" ");
+
+        coef=1;
+
+        for(j=0;j<=i;j++)
+        {
+            printf("%4d",coef);
+            coef=coef*(i-j)/(j+1);
+        }
+
+        printf("\n");
+    }
+
+    getch();
+}
