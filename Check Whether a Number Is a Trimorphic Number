@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+void main()
+{
+    long n,cube,temp,power=1;
+
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%ld",&n);
+
+    cube=n*n*n;
+    temp=n;
+
+    while(temp>0)
+    {
+        power=power*10;
+        temp=temp/10;
+    }
+
+    if(cube%power==n)
+        printf("Trimorphic Number");
+    else
+        printf("Not a Trimorphic Number");
+
+    getch();
+}
