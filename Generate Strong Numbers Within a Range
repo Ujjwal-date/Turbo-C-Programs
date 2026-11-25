@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void main()
+{
+    int n,i,temp,rem,j,fact,sum;
+
+    clrscr();
+
+    printf("Enter limit: ");
+    scanf("%d",&n);
+
+    printf("Strong numbers are:\n");
+
+    for(i=1;i<=n;i++)
+    {
+        temp=i;
+        sum=0;
+
+        while(temp>0)
+        {
+            rem=temp%10;
+            fact=1;
+
+            for(j=1;j<=rem;j++)
+                fact=fact*j;
+
+            sum=sum+fact;
+            temp=temp/10;
+        }
+
+        if(sum==i)
+            printf("%d ",i);
+    }
+
+    getch();
+}
