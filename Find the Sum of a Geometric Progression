@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+void main()
+{
+    int a,r,n,i,term;
+    long sum=0;
+
+    clrscr();
+
+    printf("Enter first term: ");
+    scanf("%d",&a);
+
+    printf("Enter common ratio: ");
+    scanf("%d",&r);
+
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
+
+    term=a;
+
+    for(i=1;i<=n;i++)
+    {
+        printf("%d ",term);
+        sum=sum+term;
+        term=term*r;
+    }
+
+    printf("\nSum of GP = %ld",sum);
+
+    getch();
+}
