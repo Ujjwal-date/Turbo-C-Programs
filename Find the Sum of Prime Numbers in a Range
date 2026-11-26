@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+void main()
+{
+    int start,end,i,j,flag;
+    long sum=0;
+
+    clrscr();
+
+    printf("Enter starting and ending values: ");
+    scanf("%d%d",&start,&end);
+
+    for(i=start;i<=end;i++)
+    {
+        flag=1;
+
+        if(i<2)
+            flag=0;
+
+        for(j=2;j*j<=i;j++)
+        {
+            if(i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+
+        if(flag==1)
+        {
+            printf("%d ",i);
+            sum=sum+i;
+        }
+    }
+
+    printf("\nSum of prime numbers = %ld",sum);
+
+    getch();
+}
