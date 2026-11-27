@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void main()
+{
+    long binary;
+    int decimal = 0, base = 1, digit;
+
+    clrscr();
+
+    printf("Enter a binary number: ");
+    scanf("%ld", &binary);
+
+    while(binary > 0)
+    {
+        digit = binary % 10;
+
+        if(digit != 0 && digit != 1)
+        {
+            printf("Invalid binary number");
+            getch();
+            return;
+        }
+
+        decimal = decimal + digit * base;
+        base = base * 2;
+        binary = binary / 10;
+    }
+
+    printf("Decimal equivalent = %d", decimal);
+
+    getch();
+}
