@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void main()
+{
+    long n;
+    int freq[10] = {0};
+    int digit, i;
+
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%ld", &n);
+
+    if(n < 0)
+        n = -n;
+
+    if(n == 0)
+        freq[0] = 1;
+
+    while(n > 0)
+    {
+        digit = n % 10;
+        freq[digit]++;
+        n = n / 10;
+    }
+
+    printf("\nDigit Frequency:\n");
+
+    for(i = 0; i < 10; i++)
+    {
+        if(freq[i] > 0)
+            printf("%d occurs %d times\n", i, freq[i]);
+    }
+
+    getch();
+}
